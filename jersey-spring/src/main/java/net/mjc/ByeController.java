@@ -17,11 +17,20 @@ import javax.ws.rs.Produces;
 public class ByeController {
 
     @GET
-    @RequestMapping("/{name}")
+    @RequestMapping("/bye/{name}")
     @Produces("text/plain")
     @ResponseBody
     public String bye(@PathVariable String name) {
         System.out.println("bye " + name);
-        return "Bye " + name + ", Spring 3.0!";
+        return "Bye " + name;
+    }
+
+    @GET
+    @RequestMapping("/bye")
+    @Produces("text/plain")
+    @ResponseBody
+    public String bye() {
+        System.out.println("bye");
+        return "Bye";
     }
 }

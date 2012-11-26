@@ -16,10 +16,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
     -->
     <context:component-scan base-package="net.mjc"/>
 
-    <!--
-    Beans that will make the @ReqeustMapping annotation on the class or method to be processed by Spring
-    This annotation will be discussed in detail in the next section.
-    -->
+    <!-- Beans that will make the @ReqeustMapping annotation on the class or method to be processed by Spring -->
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
