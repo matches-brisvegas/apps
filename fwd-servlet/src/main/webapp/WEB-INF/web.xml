@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebApp_ID"
+         version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>MJC WebApp</display-name>
+
+    <servlet>
+        <servlet-name>facebook-proxy</servlet-name>
+        <servlet-class>net.mjc.jetty.FwdProxyServlet</servlet-class>
+        <init-param>
+            <param-name>ProxyTo</param-name>
+            <param-value>http://www.facebook.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Prefix</param-name>
+            <param-value>/facebook</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>facebook-proxy</servlet-name>
+        <url-pattern>/facebook/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>facebook-graph-proxy</servlet-name>
+        <servlet-class>net.mjc.jetty.FwdProxyServlet</servlet-class>
+        <init-param>
+            <param-name>ProxyTo</param-name>
+            <param-value>http://graph.facebook.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Prefix</param-name>
+            <param-value>/facebook-graph</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>facebook-graph-proxy</servlet-name>
+        <url-pattern>/facebook-graph/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>wotif-proxy</servlet-name>
+        <servlet-class>net.mjc.jetty.FwdProxyServlet</servlet-class>
+        <init-param>
+            <param-name>ProxyTo</param-name>
+            <param-value>http://www.wotif.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Prefix</param-name>
+            <param-value>/wotif</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>wotif-proxy</servlet-name>
+        <url-pattern>/wotif/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
