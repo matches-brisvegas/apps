@@ -7,12 +7,12 @@ import org.mockito.MockitoAnnotations;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-public class TestServletTest extends TestCase {
+public class TestServletTest30 extends TestCase {
 
     @Before
     public void before() {
         System.out.println("FwdProxyServletTest.before");
-        MockitoAnnotations.initMocks(TestServletTest.class);
+        MockitoAnnotations.initMocks(TestServletTest30.class);
     }
 
     @After
