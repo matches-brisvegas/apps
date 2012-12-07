@@ -30,7 +30,7 @@
 
     <servlet>
         <servlet-name>servlet25</servlet-name>
-        <servlet-class>net.mjc.TestServlet25</servlet-class>
+        <servlet-class>net.mjc.servlet.TestServlet25</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
